@@ -5,8 +5,8 @@ import { Canvas, useFrame } from "@react-three/fiber"
 import { Suspense, useCallback, useEffect, useRef, useState } from "react"
 import * as THREE from "three"
 
-import { Command, Cursor } from "@workspace/ui/components/shell"
-import { Progress } from "@workspace/ui/components/ui/progress"
+import { Command, Cursor } from "@/components/shell"
+import { Progress } from "@/components/ui/progress"
 
 import { MODEL_URL } from "@/lib/site"
 
