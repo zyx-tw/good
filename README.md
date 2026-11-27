@@ -1,6 +1,6 @@
 # good
 
-A digital 乖乖 at good.zyx.tw, the snack engineers tape onto servers so they behave.
+A digital guaiguai at good.zyx.tw: the snack that engineers tape onto servers so they behave.
 
 ## Development
 
