@@ -10,9 +10,6 @@
 /* One fixed theme: dark: never matches, not even under a dark OS setting. */
 @custom-variant dark (&:is(.dark *));
 
-@source "../../../app/**/*.{ts,tsx}";
-@source "../../../components/**/*.{ts,tsx}";
-@source "../../../lib/**/*.{ts,tsx}";
 @source "../**/*.{ts,tsx}";
 
 @theme inline {
