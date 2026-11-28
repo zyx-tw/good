@@ -5,7 +5,6 @@ import { attributeRootLayoutRequest } from "@/lib/otel/layout"
 import "@/styles/globals.css"
 import { BottomCorners, LegalLinks, TopCorners } from "@/components/corners"
 import { NextPageDecode } from "@/components/page-decode-next"
-import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { fontVariables } from "@/lib/fonts"
 
@@ -44,11 +43,7 @@ export default async function RootLayout({
   await attributeRootLayoutRequest()
 
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("dark", "antialiased", fontVariables, "font-sans")}
-    >
+    <html lang="en" className={cn("antialiased", fontVariables, "font-sans")}>
       <head>
         <link
           rel="preload"
@@ -58,14 +53,12 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <ThemeProvider>
-          <NextPageDecode />
-          <TooltipProvider>
-            <TopCorners trail={[{ label: "GOOD" }]} />
-            {children}
-            <BottomCorners links={<LegalLinks />} />
-          </TooltipProvider>
-        </ThemeProvider>
+        <NextPageDecode />
+        <TooltipProvider>
+          <TopCorners trail={[{ label: "GOOD" }]} />
+          {children}
+          <BottomCorners links={<LegalLinks />} />
+        </TooltipProvider>
       </body>
     </html>
   )
